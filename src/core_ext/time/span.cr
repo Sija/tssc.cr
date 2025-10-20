@@ -1,3 +1,5 @@
+# A module for converting time span strings into `Time::Span` objects and
+# the other way around.
 module Time::Span::StringConverter
   private PATTERN = %r{
     (?:(?<sign>[+-])\s*)?
