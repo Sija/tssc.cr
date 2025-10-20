@@ -1,4 +1,4 @@
-# `Time::Span` String Converter for JSON & YAML
+# `Time::Span` String Converter for JSON & YAML [![CI](https://github.com/Sija/tssc.cr/actions/workflows/ci.yml/badge.svg)](https://github.com/Sija/tssc.cr/actions/workflows/ci.yml) [![Releases](https://img.shields.io/github/release/Sija/tssc.cr.svg)](https://github.com/Sija/tssc.cr/releases) [![License](https://img.shields.io/github/license/Sija/tssc.cr.svg)](https://github.com/Sija/tssc.cr/blob/master/LICENSE)
 
 Provides a `Time::Span::StringConverter` module for parsing and serializing `Time::Span` objects as strings.
 Can be used standalone or with JSON & YAML.
