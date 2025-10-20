@@ -29,9 +29,9 @@ Time::Span::StringConverter.dump(1.hour + 15.minutes)   # => "1 hour, 15 minutes
 ### JSON & YAML
 
 ```crystal
+require "json"
+require "yaml"
 require "tssc"
-require "tssc/json"
-require "tssc/yaml"
 
 record FooWithTimeSpan, ttl : Time::Span? do
   include JSON::Serializable
