@@ -1,4 +1,4 @@
-# `Time::Span` String Converter for JSON & YAML [![CI](https://github.com/Sija/tssc.cr/actions/workflows/ci.yml/badge.svg)](https://github.com/Sija/tssc.cr/actions/workflows/ci.yml) [![Releases](https://img.shields.io/github/release/Sija/tssc.cr.svg)](https://github.com/Sija/tssc.cr/releases) [![License](https://img.shields.io/github/license/Sija/tssc.cr.svg)](https://github.com/Sija/tssc.cr/blob/master/LICENSE)
+# `Time::Span` String Converter [![CI](https://github.com/Sija/tssc.cr/actions/workflows/ci.yml/badge.svg)](https://github.com/Sija/tssc.cr/actions/workflows/ci.yml) [![Releases](https://img.shields.io/github/release/Sija/tssc.cr.svg)](https://github.com/Sija/tssc.cr/releases) [![License](https://img.shields.io/github/license/Sija/tssc.cr.svg)](https://github.com/Sija/tssc.cr/blob/master/LICENSE)
 
 Provides a `Time::Span::StringConverter` module for parsing and serializing `Time::Span` objects as strings.
 Can be used standalone or with JSON & YAML.
@@ -58,12 +58,12 @@ foo.ttl # => 01:15:00
 > [!NOTE]
 > Allowed suffixes:
 >
-> - week: `w`, `week(s)`
-> - day: `d`, `day(s)`
-> - hour: `h`, `hour(s)`
-> - minute: `m`, `min`, `minute(s)`
-> - second: `s`, `sec`, `second(s)`
-> - nanosecond: `ns`, `nanosecond(s)`
+> - week — `w`, `week(s)`
+> - day — `d`, `day(s)`
+> - hour — `h`, `hour(s)`
+> - minute — `m`, `min`, `minute(s)`
+> - second — `s`, `sec`, `second(s)`
+> - nanosecond — `ns`, `nanosecond(s)`
 
 ## Contributing
 
