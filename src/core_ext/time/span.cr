@@ -65,7 +65,7 @@ module Time::Span::StringConverter
 
   # :ditto:
   #
-  # Raises an `ArgumentError` if the string is invalid.
+  # Raises an `ArgumentError` if the *string* is invalid.
   def parse(string : String) : Time::Span
     parse?(string) ||
       raise ArgumentError.new "Invalid time span: #{string.inspect}"
