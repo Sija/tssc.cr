@@ -23,7 +23,7 @@ Can be used standalone or with JSON & YAML.
 require "tssc"
 
 Time::Span::StringConverter.parse("1 hour, 15 minutes") # => 01:15:00
-Time::Span::StringConverter.dump(1.hour + 15.minutes)   # => "1 hour, 15 minutes"
+Time::Span::StringConverter.format(1.hour + 15.minutes) # => "1 hour, 15 minutes"
 ```
 
 ### JSON & YAML

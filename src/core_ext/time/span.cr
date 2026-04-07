@@ -74,10 +74,10 @@ module Time::Span::StringConverter
   # Returns given time span *value* in the textual format.
   #
   # ```
-  # Time::Span::StringConverter.dump(1.hour + 15.minutes)        # => "1 hour, 15 minutes"
-  # Time::Span::StringConverter.dump(1.hour + 15.minutes, :code) # => "1.hour + 15.minutes"
+  # Time::Span::StringConverter.format(1.hour + 15.minutes)        # => "1 hour, 15 minutes"
+  # Time::Span::StringConverter.format(1.hour + 15.minutes, :code) # => "1.hour + 15.minutes"
   # ```
-  def dump(value : Time::Span, format : Format = :text) : String
+  def format(value : Time::Span, format : Format = :text) : String
     is_negative = value.negative?
     value = value.abs
 

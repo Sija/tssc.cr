@@ -91,61 +91,61 @@ describe Time::Span::StringConverter do
     end
   end
 
-  describe ".dump" do
+  describe ".format" do
     context "(format: :text)" do
       it "serializes Time::Span value into a string" do
-        Time::Span::StringConverter.dump(1.day + 2.hours + 3.minutes + 4.seconds)
+        Time::Span::StringConverter.format(1.day + 2.hours + 3.minutes + 4.seconds)
           .should eq "1 day, 2 hours, 3 minutes, 4 seconds"
 
-        Time::Span::StringConverter.dump(11.days)
+        Time::Span::StringConverter.format(11.days)
           .should eq "1 week, 4 days"
 
-        Time::Span::StringConverter.dump(1.hour + 15.minutes)
+        Time::Span::StringConverter.format(1.hour + 15.minutes)
           .should eq "1 hour, 15 minutes"
 
-        Time::Span::StringConverter.dump(1.hour + 15.nanoseconds)
+        Time::Span::StringConverter.format(1.hour + 15.nanoseconds)
           .should eq "1 hour, 15 nanoseconds"
       end
 
       it "serializes Time::Span with zero value into a string" do
-        Time::Span::StringConverter.dump(Time::Span.zero)
+        Time::Span::StringConverter.format(Time::Span.zero)
           .should eq "0 seconds"
       end
 
       it "serializes negative Time::Span value into a string" do
-        Time::Span::StringConverter.dump(-(2.hours + 5.minutes))
+        Time::Span::StringConverter.format(-(2.hours + 5.minutes))
           .should eq "-2 hours, 5 minutes"
 
-        Time::Span::StringConverter.dump(-5.minutes)
+        Time::Span::StringConverter.format(-5.minutes)
           .should eq "-5 minutes"
       end
     end
 
     context "(format: :code)" do
       it "serializes Time::Span value into a string" do
-        Time::Span::StringConverter.dump(1.day + 2.hours + 3.minutes + 4.seconds, :code)
+        Time::Span::StringConverter.format(1.day + 2.hours + 3.minutes + 4.seconds, :code)
           .should eq "1.day + 2.hours + 3.minutes + 4.seconds"
 
-        Time::Span::StringConverter.dump(11.days, :code)
+        Time::Span::StringConverter.format(11.days, :code)
           .should eq "1.week + 4.days"
 
-        Time::Span::StringConverter.dump(1.hour + 15.minutes, :code)
+        Time::Span::StringConverter.format(1.hour + 15.minutes, :code)
           .should eq "1.hour + 15.minutes"
 
-        Time::Span::StringConverter.dump(1.hour + 15.nanoseconds, :code)
+        Time::Span::StringConverter.format(1.hour + 15.nanoseconds, :code)
           .should eq "1.hour + 15.nanoseconds"
       end
 
       it "serializes Time::Span with zero value into a string" do
-        Time::Span::StringConverter.dump(Time::Span.zero, :code)
+        Time::Span::StringConverter.format(Time::Span.zero, :code)
           .should eq "0.seconds"
       end
 
       it "serializes negative Time::Span value into a string" do
-        Time::Span::StringConverter.dump(-(2.hours + 5.minutes), :code)
+        Time::Span::StringConverter.format(-(2.hours + 5.minutes), :code)
           .should eq "-(2.hours + 5.minutes)"
 
-        Time::Span::StringConverter.dump(-5.minutes, :code)
+        Time::Span::StringConverter.format(-5.minutes, :code)
           .should eq "-5.minutes"
       end
     end

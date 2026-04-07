@@ -7,6 +7,6 @@ module Time::Span::StringConverter
   end
 
   def to_yaml(value : Time::Span, yaml : ::YAML::Nodes::Builder)
-    yaml.scalar dump(value)
+    yaml.scalar format(value)
   end
 end
